@@ -11,6 +11,10 @@ spring:
           uri: lb://EMPLOYEE-SERVICE
           predicates:
             - Path=/employees/**
+        - id: departments
+          uri: lb://DEPARTMENT-SERVICE
+          predicates:
+            - Path=/departments/**
 eureka:
   client:
     fetch-registry: true
